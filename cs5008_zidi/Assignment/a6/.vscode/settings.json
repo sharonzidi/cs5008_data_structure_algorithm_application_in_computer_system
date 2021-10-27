@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "hashtable.h": "c",
+        "stdio.h": "c",
+        "linkedlist.h": "c"
+    }
+}

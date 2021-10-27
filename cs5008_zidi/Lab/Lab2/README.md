@@ -1,0 +1,5 @@
+-Lab2 (Zidi Xia)
+-
+- It took me 3 hours to finish.
+- I finished it by myself.
+- I haven't use external resources.

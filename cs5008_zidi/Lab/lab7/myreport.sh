@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#Sys Report Generation
+TITLE="System Information Report for $HOSTNAME" 
+CURRENT_TIME=$(date + "%x %r %z")
+TIME_STAMP="Generated $CURRENT_TIME, by $USER"
+
+report_uptime(){
+    #echo "Reporting uptime"
+    cat << _EOF_
+System Uptime:
+$(uptime)
+_EOF_
+    return
+}
+
+report_disk_space(){
+    #echo "Reporting disk space"
+    cat << _EOF_
+Disk Space
+$(df)
+_EOF_
+    return
+}
+
+report_home_space(){
+    #echo "Reporting home space"
+    cat << _EOF_
+Home Space
+$(du)
+_EOF_
+    return
+}
+
+cat << EOF
+# $TITLE
+
+Hi $1!
+
+$TIME_STAMP
+
+$(report_uptime)
+
+$(report_disk_space)
+
+$(report_home_space)
+
+EOF
+
